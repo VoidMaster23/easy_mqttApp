@@ -1,16 +1,11 @@
-# easy_mqtt
+# EasyMQTT App
 
-A new Flutter application.
+Flutter App for remote control of an EasyMQTT system. The app makes requests to the flask web server running the REST API for monitoring and control of the system 
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Acknowledgements
+* [Cupertino Icons](https://pub.dev/packages/cupertino_icons)
+* [Splash Screen](https://pub.dev/packages/splashscreen)
+* [Responsive Grid](https://pub.dev/packages/responsive_grid)
+* [Mongo Dart](https://pub.dev/packages/mongo_dart)
+* [Flutter Toast](https://pub.dev/packages/fluttertoast)
+* [Toggle Switch](https://pub.dev/packages/toggle_switch)
