@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:easy_mqtt/main.dart';
 
+///Class that defines the structure for switches
 class Switches {
   final String deviceName;
   final bool status;
@@ -24,6 +25,7 @@ class Switches {
     });
   }
 
+  ///Funcrtion to create a switch object from JSON data
   factory Switches.fromJson(Map<String, dynamic> json) {
     return Switches(
         deviceName: json['DeviceName'] as String,

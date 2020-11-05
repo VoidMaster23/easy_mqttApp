@@ -1,3 +1,4 @@
+///Class that defines the structure for sensors
 class Sensors {
   final String deviceName;
   final double lastRecordedValue;
@@ -19,7 +20,7 @@ class Sensors {
   //     return list.map((model) => Sensors.fromJson(model)).toList();
   //   });
   // }
-
+  ///Funcrtion to create a sensor object from JSON data
   factory Sensors.fromJson(Map<String, dynamic> json) {
     return Sensors(
         deviceName: json['DeviceName'] as String,

@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:easy_mqtt/main.dart';
 
+///Class that defines the structure for history objects
 class History {
   final String deviceName;
   final bool status;
@@ -26,6 +27,7 @@ class History {
     });
   }
 
+  ///Funcrtion to create a history object from JSON data
   factory History.fromJson(Map<String, dynamic> json) {
     return History(
         deviceName: json['DeviceName'] as String,

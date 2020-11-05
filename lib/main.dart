@@ -16,6 +16,7 @@ import 'models/history.dart';
 import 'models/switches.dart';
 import 'viewSwitch.dart';
 
+///Serves as the starting point for the app and gets the URL in the database
 void main() async {
   dbStuff.getUrl();
   runApp(MaterialApp(
@@ -28,6 +29,8 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => new _MyAppState();
 }
 
+/// Splash Screen that disapears after 10 seconds
+/// This is typically enough time for the URL to be processed
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
@@ -64,21 +67,25 @@ class _MyAppState extends State<MyApp> {
 }
 
 class AfterSplash extends StatelessWidget {
+  ///Method that converts a JSON string into a list of switch objects
   List<Switches> parseSwitches(String responseBody) {
     var jsonArr = jsonDecode(responseBody)['result'];
     return jsonArr.map<Switches>((json) => Switches.fromJson(json)).toList();
   }
 
+  ///Method that converts a JSON string into a list of sensor objects
   List<Sensors> parseSensors(String responseBody) {
     var jsonArr = jsonDecode(responseBody)['result'];
     return jsonArr.map<Sensors>((json) => Sensors.fromJson(json)).toList();
   }
 
+  ///Method that converts a JSON string into a list of device objects
   List<Devices> parseDevices(String responseBody) {
     var jsonArr = jsonDecode(responseBody)['result'];
     return jsonArr.map<Devices>((json) => Devices.fromJson(json)).toList();
   }
 
+  ///Method that converts a JSON string into a list of history objects
   List<History> parseHistory(String responseBody) {
     var jsonArr = jsonDecode(responseBody)['result'];
     return jsonArr.map<History>((json) => History.fromJson(json)).toList();

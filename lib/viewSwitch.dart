@@ -164,6 +164,7 @@ class _SwitchTileState extends State<SwitchTile> {
                     color: Colors.blue,
                     child: Text("Confirm"),
                     onPressed: () async {
+                      //make http request
                       await http
                           .put(
                               "${dbStuff.url}/switches/update/$deviceName/${pinNumber.toString()}",
